@@ -1,0 +1,249 @@
+body {
+  margin: 20px;
+}
+.nav-bar {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  height: 50px;
+}
+.quidax-header {
+  color: blueviolet;
+  font-weight: bold;
+  font-size: 40px;
+  
+}
+.get-button {
+  background-color: blueviolet;
+  color: white;
+  border: none;
+  height: 40px;
+  width: 120px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  
+}
+.get-button:hover {
+  background-color: rgb(114, 233, 114);
+  transition: 0.5s;
+}
+.menu-icon {
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+  cursor: pointer;
+}
+.menu-icon span {
+  height: 5px;
+  background-color: blueviolet;
+  border-radius: 5px;;
+}
+.buy-header {
+  font-size: 50px;
+  font-family: Arial;
+  font-weight: bolder;
+  margin-top: 170px;
+}
+.quidax-p {
+  font-weight: lighter;
+  font-family: Arial;
+  font-size: 15px;
+}
+.input-mail {
+  background-color: rgb(207, 199, 199);
+  width: 430px;
+  height: 40px;
+  border-radius: 5px;
+  margin-left: 0px;
+  border-width:1px;
+  border: lighter;
+  border-color: whitesmoke;
+}
+.input-mail:focus {
+  border-color: blueviolet;
+  outline: none;
+}
+.started-button {
+  background-color: blueviolet;
+  color: white;
+  border: none;
+  height: 50px;
+  width: 435px;
+  margin-top: 15px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.started-button:hover {
+  background-color: rgb(114, 233, 114);
+  transition: 0.5s;
+}
+@media  (min-width:100px) and (max-width:200px) {
+ body {
+  background-color: white;
+ }
+}
+.main-div {
+  display: flex;
+  margin-top: 30px;
+  justify-content: space-evenly;
+}
+.sub-button {
+  background-color: black;
+  color: white;
+  border: none;
+  height: 40px;
+  border-radius: 10px;
+  width: 140px;
+  font-weight: lighter;
+  font-size: 10.5px;
+}
+.sub-button span {
+  font-size: 18px;
+}
+.mid-header {
+  font-weight: 30px;
+  font-size: 30px;
+}
+.texts {
+  font-size: 15px;
+}
+.container-div {
+  margin-top: 20px;
+  height: 700px;
+  width: 500px;
+  margin-left: 0px;
+  width: auto;
+  background-color: blueviolet;
+}
+.input-div {
+  display: flex;
+  justify-content: space-between;
+}
+.tabs {
+  display: flex;
+  justify-content: space-between;
+}
+.input-search {
+  background-color: rgb(207, 199, 199);
+  width: 210px;
+  height: 35px;
+  border-radius: 5px;
+  border-width:1px;
+  border: lighter;
+  border-color: whitesmoke;
+}
+.input-search:focus {
+  border-color: blueviolet;
+  outline: none;
+}
+@media (min-width:1000px) {
+  .input-search {
+    margin-right: 0px;
+  }
+}
+.tabs .active {
+  color: #4b0082;
+  border-bottom: 2px solid #4b0082;
+  padding-bottom: 4px;
+}
+
+.market-table {
+  background: #fafafa;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+}
+
+.table-header,
+.coin-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.table-header {
+  font-weight: bold;
+  color: #555;
+  border-bottom: 1px solid #ddd;
+}
+
+.coin-info {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.coin-info img {
+  width: 32px;
+  height: 32px;
+}
+
+.coin-price {
+  text-align: right;
+}
+
+.up {
+  color: green;
+  font-size: 14px;
+}
+
+.down {
+  color: red;
+  font-size: 14px;
+}
+
+.see-more {
+  text-align: center;
+  color: #4b0082;
+  font-weight: bold;
+  margin-top: 15px;
+  cursor: pointer;
+}
+.container-box {
+  background-color: blueviolet;
+  height: 840px;
+  display: flex;
+  flex-direction: column;
+  
+}
+.img-capital {
+  width: 400px;
+  height: 400px;
+  padding-left: 20px;
+}
+.Quidax-h3 {
+  font-size: 45px;
+  font-weight: bolder;
+  color: white;
+  text-align: center;
+}
+.Quidax-p{
+  color: white;
+  font-size: 20px;
+  font-weight: lighter;
+  padding-top: px;
+}
+
+@media (min-width: 768px) {
+   .container-box {
+      flex-direction: row;
+   }
+   .Quidax-h3 {
+      order: 1;
+   }
+   .img-capital {
+    order: 2;
+   }
+}
+

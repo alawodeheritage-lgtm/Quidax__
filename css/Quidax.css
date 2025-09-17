@@ -15,13 +15,13 @@ body {
   height: 50px;
 }
 .quidax-header {
-  color: blueviolet;
+  color:  #6100A5;;
   font-weight: bold;
   font-size: 40px;
   
 }
 .get-button {
-  background-color: blueviolet;
+  background-color:  #6100A5;;
   color: white;
   border: none;
   height: 40px;
@@ -45,7 +45,7 @@ body {
 }
 .menu-icon span {
   height: 5px;
-  background-color: blueviolet;
+  background-color:  #6100A5;;
   border-radius: 5px;;
 }
 .buy-header {
@@ -60,21 +60,21 @@ body {
   font-size: 15px;
 }
 .input-mail {
-  background-color: rgb(207, 199, 199);
+  background-color: #FFFFFF;
   width: 430px;
   height: 40px;
   border-radius: 5px;
   margin-left: 0px;
-  border-width:1px;
+  border:0.2px solid #ccc;
   border: lighter;
-  border-color: whitesmoke;
+  color: rgb(76, 74, 85);
 }
 .input-mail:focus {
-  border-color: blueviolet;
+  border-color:  #6100A5;;
   outline: none;
 }
 .started-button {
-  background-color: blueviolet;
+  background-color:  #6100A5;;
   color: white;
   border: none;
   height: 50px;
@@ -124,7 +124,7 @@ body {
   width: 500px;
   margin-left: 0px;
   width: auto;
-  background-color: blueviolet;
+  background-color:  #6100A5;;
 }
 .input-div {
   display: flex;
@@ -144,7 +144,7 @@ body {
   border-color: whitesmoke;
 }
 .input-search:focus {
-  border-color: blueviolet;
+  border-color:  #6100A5;;
   outline: none;
 }
 @media (min-width:1000px) {
@@ -153,8 +153,8 @@ body {
   }
 }
 .tabs .active {
-  color: #4b0082;
-  border-bottom: 2px solid #4b0082;
+  color:  #6100A5;;
+  border-bottom: 2px solid  #6100A5;;
   padding-bottom: 4px;
 }
 
@@ -211,7 +211,7 @@ body {
   cursor: pointer;
 }
 .container-box {
-  background-color: blueviolet;
+  background-color:  #6100A5;;
   height: 840px;
   display: flex;
   flex-direction: column;
@@ -221,6 +221,7 @@ body {
   width: 400px;
   height: 400px;
   padding-left: 20px;
+  vertical-align: middle;
 }
 .Quidax-h3 {
   font-size: 45px;
@@ -240,6 +241,9 @@ body {
       flex-direction: row;
    }
    .Quidax-h3 {
+      order: 1;
+   }
+   .Quidax-p {
       order: 1;
    }
    .img-capital {

@@ -1,5 +1,6 @@
 body {
   margin: 20px;
+  background-color: #FFFFFF;
 }
 .nav-bar {
   background-color: white;
@@ -24,50 +25,81 @@ body {
   background-color:  #6100A5;;
   color: white;
   border: none;
-  height: 40px;
-  width: 120px;
+  height: 45px;
+  width: 140px;
   border-radius: 10px;
-  font-weight: bold;
+  font-weight: bolder;
   cursor: pointer;
-  
+
 }
 .get-button:hover {
   background-color: rgb(114, 233, 114);
   transition: 0.5s;
 }
 .menu-icon {
-  width: 30px;
+  width: 25px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 20px;
   cursor: pointer;
+  border-radius: 30px;
 }
 .menu-icon span {
-  height: 5px;
+  height: 3px;
   background-color:  #6100A5;;
   border-radius: 5px;;
 }
 .buy-header {
-  font-size: 50px;
+  font-size: 55px;
   font-family: Arial;
-  font-weight: bolder;
-  margin-top: 170px;
+  font-weight: 700;
+  margin-top: 165px;
+  color: rgb(32,23,73);
+  line-height: 65px;
+}
+.buy-header span {
+  display: block;
+  width: 100%;
+  margin: 5px 0;
+}
+@media (min-width: 768px) {
+  .buy-header {
+  text-align: left;
+  }
+  .buy-header span {
+    display: inline;
+    text-align: left;
+    width: auto;
+    margin: 0;
+  }
+  .ease-word {
+    text-align: center;
+  }
+}
+.mid-div {
+  margin-top: 10px;
+  display: grid;
 }
 .quidax-p {
-  font-weight: lighter;
-  font-family: Arial;
-  font-size: 15px;
+  font-family: UncutSans,sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #4C4A55;
+  display: flex;
 }
 .input-mail {
-  background-color: #FFFFFF;
+  background-color: transparent;
   width: 430px;
-  height: 40px;
-  border-radius: 5px;
+  font-size: 13.5px;
+  height: 46px;
+  border-radius: 8px;
   margin-left: 0px;
   border:0.2px solid #ccc;
   border: lighter;
   color: rgb(76, 74, 85);
+  margin-top: 10px;
+  padding-left: 16px;
 }
 .input-mail:focus {
   border-color:  #6100A5;;
@@ -77,7 +109,7 @@ body {
   background-color:  #6100A5;;
   color: white;
   border: none;
-  height: 50px;
+  height: 46px;
   width: 435px;
   margin-top: 15px;
   border-radius: 10px;
@@ -88,35 +120,65 @@ body {
   background-color: rgb(114, 233, 114);
   transition: 0.5s;
 }
-@media  (min-width:100px) and (max-width:200px) {
- body {
-  background-color: white;
- }
-}
 .main-div {
   display: flex;
   margin-top: 30px;
-  justify-content: space-evenly;
 }
-.sub-button {
+.sub-button1 {
   background-color: black;
   color: white;
   border: none;
-  height: 40px;
-  border-radius: 10px;
-  width: 140px;
+  height: 45px;
+  border-radius: 5px;
+  width: 155px;
   font-weight: lighter;
   font-size: 10.5px;
 }
-.sub-button span {
+.sub-button1 span {
   font-size: 18px;
+}
+.sub-button2 {
+  background-color: black;
+  color: white;
+  border: none;
+  height: 45px;
+  border-radius: 5px;
+  width: 155px;
+  font-weight: lighter;
+  font-size: 10.5px;
+  margin-left: 18px;
+}
+.sub-button2 span {
+  font-size: 18px;
+}
+@media  (min-width:700px) {
+  .mid-div{
+    place-items: center;
+  }
+  .main-div{
+    justify-content: center;
+  }
+}
+@media  (min-width:700px) {
+  .input-mail {
+    width: 300px;
+  }
+  .started-button {
+    width: 110px;
+  }
+}
+.Quidax-info {
+  color: #201749;
 }
 .mid-header {
   font-weight: 30px;
-  font-size: 30px;
+  font-size: 25px;
+  color: #201749;
 }
 .texts {
-  font-size: 15px;
+  font-size: 16px;
+  color: #4C4A55;
+  font-weight: 9px;
 }
 .container-div {
   margin-top: 20px;

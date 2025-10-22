@@ -3,20 +3,120 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quidax</title>
+  <title>Quidax Clone</title>
   <link rel="stylesheet" href="css/Quidax.css">
+    <link rel="stylesheet" href="css/NavBar.css">
 </head>
 <body>
-  <div class="container">
-  <nav class="nav-bar">
+  <header class="nav-bar">
     <div class="quidax-header">Quidax</div>
-    <button class="get-button">Get Started</button>
-    <div class="menu-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-    </div>
+    <nav class="nav-links" id="nav-links">
+      <ul>
+        <li class="dropdown">
+          <a href="#">Buy <span class="arrow">▼</span></a>
+          <ul class="dropdown-menu">
+            <li>
+            <img src="pictures/24_7_support_img.svg" alt="image" class="image-nav">
+            <h1>Instant Swap</h1>
+            <p>Buy your favorite <br>cryptocurrencies in two minutes or <br>less</p>
+
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Trade <span class="arrow">▼</span></a>
+          <ul class="dropdown-menu">
+            <li>
+              <img src="pictures/P2_P_img.png" alt="image"class="image-nav">
+              <h1>P2P Trading</h1>
+              <p>Deposit local currencies and <br>trade crypto at the best prices <br>with verified merchants.</p>
+            </li>
+            <li>
+              <img src="pictures/order_book_24761086da.svg" alt="image" class="image-nav">
+              <h1>Orderbook</h1>
+              <p>Access diverse markets with super charged liquidity for your crypto trading needs.</p>
+            </li>
+            <li>
+            <img src="pictures/get_started_straigh_away_rocket_img.svg" alt="image" class="image-nav">
+            <h1>API</h1>
+            <p>Our API gives you all you <br>need and so much more.</p>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Business <span class="arrow">▼</span></a>
+          <ul class="dropdown-menu">
+            <li>
+            <img src="pictures/OTC_2x_8_img.png" alt="image" class="image-nav">
+              <h1>OTC</h1>
+              <p>Execute large orders with our <br> premium OTC trading service.</p>
+            </li>
+            <li>
+            <img src="pictures/launchpad_img.png" alt="image" class="image-nav">
+              <h1>LaunchPad</h1>
+            <p>List new and existing tokens on <br>Quidax with ease.</p>
+            </li>
+            <li>
+              <img src="pictures/Easy_AP_Is_img.png" alt="image" class="image-nav">
+              <h1>API<h1>
+              <p>Building crypto powered features with <br>our API.</p>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Learn <span class="arrow">▼</span></a>
+          <ul class="dropdown-menu">
+            <li>
+            <img src="pictures/quidax_academy_img.svg" alt="image" class="image-nav"> 
+              <h1>Quidax Academy</h1>
+               <p>The Quidax Academy will teach <br> you the Basics of Crypto <br> including what it is,how to trade <br>it, and its various use cases.</p>
+            </li>
+            <li>
+              <img src="pictures/blog_03a1e3ec0b.svg" alt="image" class="image-nav">
+              <h1>Quidax Blog</h1>
+              <p>The future belongs to the <br> curious. Here's to exploring,<br> finding answers, acquiring  more knowledge <br> and  building excitement!!</p>
+            </li>
+            <li>
+              <img src="pictures/blog_03a1e3ec0b.svg" alt="image" class="image-nav">
+              <h1>Help Center</h1>
+              <p>How can we help? Find answers <br>to common questions and get <br>assistance from customer <br> support</p>
+            </li>
+            <li>
+              <img src="pictures/community_quidax_img.svg" alt="image" class="image-nav">
+              <h1>Quidax Community</h1>
+              <p>Join your fellow crypto heads,<br> network ,learn & share tips and stand <br> a chance to earn</p>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Why Quidax <span class="arrow">▼</span></a>
+          <ul class="dropdown-menu">
+            <li>
+              <img src="pictures/users_img.svg" alt="image" class="image-nav">
+              <h1>About us</h1>
+              <p>We are a TRIBE, not only as a <br> company but as an Ecosystem <br>interested in value and results.</p>
+            </li>
+            <li>
+              <img src="pictures/careers_img.svg" alt="image" class="image-nav">
+              <h1>Careers</h1>
+              <p>At Quidax, your opportunities are <br>limitless.us live, learn and <br>shape the world of <br>Cryptocurrency together.</p>
+            </li>
+          </ul>
+        </li>
+      </ul>
     </nav>
+
+    <div class="right-section">
+      <div class="sign-li">Sign in</div>
+      <button class="get-button">Get Started</button>
+      <div class="menu-icon" id="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+  </header>
+</div>
+
     <h1 class="buy-header">
       <span class="line1">Buy and sell crypto with</span> <span class="ease-word">ease</span>
     </h1>
@@ -25,7 +125,7 @@
       Join the squad and get started today.
     </p>
     <div class="mid-div">
-    <input  class="input-mail" type="email" placeholder="Your e-mail" required>
+    <input class="input-mail" type="email" placeholder="Your e-mail" required>
     <button class="started-button">
       Get Started
     </button>
@@ -34,6 +134,7 @@
     <button class="sub-button1">Download on the <br> <span>App Store</span></button>
     <button class="sub-button2">GET IT ON <br> <span>Google Play</span></button>
   </div> 
+  <img src="pictures/phone-img.png" alt="phone image">
   </div>
   <h2 class="mid-header">What's the market saying&#63</h2>
    <div class="tabs">
@@ -42,7 +143,6 @@
       <span>Top Gainers</span>
       <input type="text" placeholder="Search for crypto" class="input-search" required>
     </div>
-
     <div class="market-table">
       <div class="table-header">
         <span>NAME</span>
@@ -93,31 +193,33 @@
       <p class="see-more">See more markets</p>
     </div>
   </div>
-  <img src="image-2.jpg" alt="Quidax">
+  <div class="container-menu">
+  <img src="pictures/image-2.jpg"  class="img-box" alt="Quidax">
+  </div>
   <h1 class="Quidax-info">
     Why Quidax&#63
   </h1>
-  <p class="texts">
+  <p class="text">
     Depending on where you are, the stress of buying crypto could drive you nuts. We're here to change that.
   </p>
   <h2 class="mid-header">Fast Transactions</h2>
-  <p class="texts">
+  <p class="text">
    No long steps here,just straightforward ways to trade crypto.
    </p>
    <h2 class="mid-header">Safe and Secure</h2>
-  <p class="texts">
+  <p class="text">
    You can rest easy knowing that your crypto is safe with us anytime!
    </p>
    <h2 class="mid-header">Test of Options</h2>
-  <p class ="texts">
+  <p class ="text">
     We list new cryptocurrencies regularly so that you can buy them easily.
    </p>
       <h2 class="mid-header">24/7 Support</h2>
-  <p class="texts">
+  <p class="text">
     Even if the sky is falling or our favorite show is on,we're always here to help.
    </p>
    <div class="container-box">
-    <img class="img-capital" src="image-1.jpg">
+    <img class="img-capital" src="pictures/image-1.jpg">
     <div>
     <h3 class="Quidax-h3">
       Quidax is licensed by the Securities and Exchange Commission of Nigeria
@@ -125,12 +227,13 @@
     <p class="Quidax-p">We're the first crypto exchange to receive a provisional Digital Exchange license by Nigeria's SEC.</p>
    </div>
    </div>
-   <h2 class="mid-header">
+   <h2 class="mid-headers">
     Get familiar with our products
-   </h4>
+   </h2>
    <p class="texts">
     A complete suite of the most helpful cryptocurrency products at your fingertips.
    </p>
    <!--<img src="https://nynm-quidax-strapi.s3.amazonaws.com/quidax_logo_0b49871396.svg" width="366" height="91" alt="Home" class="styles__LogoImage-sc-hcqy6y-0 cBqDSR">-->
+   <script src="script.js"></script>
 </body>
 </html>

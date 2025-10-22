@@ -1,60 +1,9 @@
-body {
-  margin: 20px;
-  background-color: #FFFFFF;
-}
-.nav-bar {
-  background-color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 1000;
-  height: 50px;
-}
-.quidax-header {
-  color:  #6100A5;;
-  font-weight: bold;
-  font-size: 40px;
-  
-}
-.get-button {
-  background-color:  #6100A5;;
-  color: white;
-  border: none;
-  height: 45px;
-  width: 140px;
-  border-radius: 10px;
-  font-weight: bolder;
-  cursor: pointer;
-
-}
-.get-button:hover {
-  background-color: rgb(114, 233, 114);
-  transition: 0.5s;
-}
-.menu-icon {
-  width: 25px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 20px;
-  cursor: pointer;
-  border-radius: 30px;
-}
-.menu-icon span {
-  height: 3px;
-  background-color:  #6100A5;;
-  border-radius: 5px;;
-}
+/* Body */
 .buy-header {
   font-size: 55px;
   font-family: Arial;
   font-weight: 700;
-  margin-top: 165px;
+  margin-top: 100px;
   color: rgb(32,23,73);
   line-height: 65px;
 }
@@ -63,7 +12,7 @@ body {
   width: 100%;
   margin: 5px 0;
 }
-@media (min-width: 768px) {
+@media (min-width: 767px) {
   .buy-header {
   text-align: left;
   }
@@ -73,8 +22,10 @@ body {
     width: auto;
     margin: 0;
   }
-  .ease-word {
+  .buy-header.ease-word {
     text-align: center;
+    display: block;
+    margin-top: 10px;
   }
 }
 .mid-div {
@@ -83,16 +34,17 @@ body {
 }
 .quidax-p {
   font-family: UncutSans,sans-serif;
-  font-size: 14px;
+  font-size: 13px;
+  font-weight: lighter;
   line-height: 1.6;
   color: #4C4A55;
   display: flex;
 }
 .input-mail {
   background-color: transparent;
-  width: 430px;
+  width: 100%;
   font-size: 13.5px;
-  height: 46px;
+  height: 45px;
   border-radius: 8px;
   margin-left: 0px;
   border:0.2px solid #ccc;
@@ -167,6 +119,11 @@ body {
     width: 110px;
   }
 }
+@media (max-width: 850px) {
+  .input-search {
+    display: none;
+  }
+}
 .Quidax-info {
   color: #201749;
 }
@@ -176,6 +133,11 @@ body {
   color: #201749;
 }
 .texts {
+  font-size: 16px;
+  color: #4C4A55;
+  font-weight: 9px;
+}
+.text {
   font-size: 16px;
   color: #4C4A55;
   font-weight: 9px;
@@ -264,7 +226,6 @@ body {
   color: red;
   font-size: 14px;
 }
-
 .see-more {
   text-align: center;
   color: #4b0082;
@@ -272,12 +233,21 @@ body {
   margin-top: 15px;
   cursor: pointer;
 }
+.container-menu {
+  display: flex;
+  flex-direction: column;
+}
 .container-box {
   background-color:  #6100A5;;
   height: 840px;
   display: flex;
-  flex-direction: column;
-  
+  flex-direction: column; 
+}
+.img-box {
+  width: 400px;
+  height: 400px;
+  padding-left: 20px;
+  vertical-align: middle;
 }
 .img-capital {
   width: 400px;
@@ -298,7 +268,22 @@ body {
   padding-top: px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 900px) {
+  .container-menu {
+      flex-direction: row;
+   }
+   .Quidax-info {
+    order: 1;
+   }
+   .mid-header {
+    order: 2;
+   }
+   .texts {
+    order: 2;
+   }
+   .img-box {
+    order: 1;
+   }
    .container-box {
       flex-direction: row;
    }
@@ -306,6 +291,9 @@ body {
       order: 1;
    }
    .Quidax-p {
+      order: 1;
+   }
+   .text {
       order: 1;
    }
    .img-capital {

@@ -1,5 +1,5 @@
 /* ============================
-   Global Reset & Body
+   Base Layout
 ============================ */
 *,
 *::before,
@@ -30,7 +30,7 @@ body {
 }
 
 .logo {
-  font-size: 26px;
+  font-size: 30px;
   font-weight: bold;
   color: #ffffff;
 }
@@ -59,13 +59,33 @@ body {
 }
 
 /* ============================
+   Layout Structure
+============================ */
+.main-layout {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  overflow: hidden;
+}
+
+.form-container,
+.right-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+/* ============================
    Form Container
 ============================ */
 .form-container {
-  margin: 0 auto;
+  flex-direction: column;
   padding: 20px;
   text-align: center;
-  flex-grow: 1;
 }
 
 .official {
@@ -79,25 +99,18 @@ body {
   text-decoration: none;
 }
 
-.official a:hover {
-  text-decoration: underline;
-}
-
 .form-title {
   font-size: 32px;
   font-weight: 600;
-  color: #fff;
   margin-bottom: 15px;
+  margin-top: 40px;
+  text-align: start;
 }
 
-/* ============================
-   Form Inputs
-============================ */
 form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
 }
 
 form label {
@@ -111,7 +124,6 @@ form label {
 }
 
 form input {
-  display: block;
   width: 100%;
   max-width: 350px;
   padding: 12px 12px 10px;
@@ -121,7 +133,9 @@ form input {
   color: #fff;
   font-size: 14px;
   margin-bottom: 18px;
-  transition: border-color 0.3s;
+}
+.fa-eye {
+  padding-bottom: 15px;
 }
 
 form input:focus {
@@ -130,21 +144,18 @@ form input:focus {
 }
 
 /* ============================
-   Password Wrapper (Aligned)
+   Password Wrapper
 ============================ */
 .password-wrapper {
   position: relative;
   width: 100%;
   max-width: 350px;
   margin-bottom: 18px;
-  display: flex;
-  align-items: center;
 }
 
 .password-wrapper input {
   width: 100%;
   padding-right: 40px;
-  margin: 0;
 }
 
 .toggle-icon {
@@ -183,22 +194,10 @@ form input:focus {
   display: flex;
   align-items: center;
   gap: 6px;
-  transition: color 0.3s ease;
-}
-
-.password-rules i {
-  font-size: 13px;
-  color: #777;
-  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .password-rules li.valid {
   color: #00ff7f;
-}
-
-.password-rules li.valid i {
-  color: #00ff7f;
-  transform: scale(1.2);
 }
 
 /* ============================
@@ -206,53 +205,71 @@ form input:focus {
 ============================ */
 .btn {
   width: 100%;
-  max-width: 350px;
-  background: linear-gradient(90deg, #6b46ff, #4b9fff);
+  max-width: 250px;
+  background-color: #39393c;
   color: #fff;
   border: none;
   padding: 14px;
-  border-radius: 8px;
+  border-radius: 22px;
   cursor: pointer;
   font-size: 15px;
   font-weight: 600;
-  transition: transform 0.2s ease, background 0.3s ease;
 }
 
 .btn:hover {
-  background: linear-gradient(90deg, #4b9fff, #6b46ff);
-  transform: translateY(-2px);
+  background-color: palevioletred;
 }
 
 /* ============================
-   Responsive Fix
+   Right Section
 ============================ */
-@media (max-width: 600px) {
-  .navbar {
-    flex-direction: column;
-    padding: 10px 20px;
-    gap: 10px;
-  }
+.right-section {
+  background: #1e1c22;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+.illustration {
+  width: 80%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+}
 
+/* ============================
+   Responsive Visibility Rules
+============================ */
+
+/* 📱 Below 900px — only Navbar visible */
+@media (max-width: 899px) {
+  .main-layout {
+    display: none;
+  }
+}
+
+/* 💻 From 900px — show form container only */
+@media (min-width: 900px) and (max-width: 1199px) {
+  .main-layout {
+    display: flex;
+  }
   .form-container {
-    margin: 20px auto;
-    padding: 30px 10px;
+    display: flex;
   }
-
-  form label,
-  form input,
-  .password-wrapper,
-  .password-rules,
-  .btn {
-    max-width: 100%;
-    width: 100%;
+  .right-section {
+    display: none;
   }
+}
 
-  .password-rules {
-    grid-template-columns: 1fr;
+/* 🖥️ 1200px and above — show both form + right section */
+@media (min-width: 1200px) {
+  .main-layout {
+    display: flex;
+  }
+  .form-container {
+    display: flex;
+  }
+  .right-section {
+    display: flex;
   }
 }

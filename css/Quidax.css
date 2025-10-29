@@ -70,11 +70,6 @@
   border-color: #6100A5;
   outline: none;
 }
-/* slant Y */
-.input-mail::first-letter {
-  transform: skewX(20deg);
-  display: inline-block;
-}
 /* Started Button */
 .started-button {
   background-color: #6100A5;

@@ -1,0 +1,2 @@
+const PRODUCTION_DOMAIN = 'quidax.io';
+const isProductionDomain = window.location.host.includes(PRODUCTION_DOMAIN);

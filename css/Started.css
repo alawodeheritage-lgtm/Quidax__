@@ -1,0 +1,258 @@
+/* ============================
+   Global Reset & Body
+============================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #17151B;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ============================
+   Navbar
+============================ */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #17151B;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+}
+
+.image-bright {
+  width: 35px;
+  height: 30px;
+  object-fit: contain;
+}
+
+/* ============================
+   Form Container
+============================ */
+.form-container {
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.official {
+  font-size: 14px;
+  color: #bbb;
+  margin-bottom: 15px;
+}
+
+.official a {
+  color: #4b9fff;
+  text-decoration: none;
+}
+
+.official a:hover {
+  text-decoration: underline;
+}
+
+.form-title {
+  font-size: 32px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+/* ============================
+   Form Inputs
+============================ */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+form label {
+  display: block;
+  width: 100%;
+  max-width: 350px;
+  text-align: left;
+  color: #ccc;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+form input {
+  display: block;
+  width: 100%;
+  max-width: 350px;
+  padding: 12px 12px 10px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background-color: #39393c;
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 18px;
+  transition: border-color 0.3s;
+}
+
+form input:focus {
+  border: 1px solid #6100A5;
+  outline: none;
+}
+
+/* ============================
+   Password Wrapper (Aligned)
+============================ */
+.password-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding-right: 40px;
+  margin: 0;
+}
+
+.toggle-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #bbb;
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.toggle-icon:hover {
+  color: #fff;
+}
+
+/* ============================
+   Password Rules
+============================ */
+.password-rules {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 20px;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 25px 0;
+  font-size: 13px;
+  color: #aaa;
+  width: 100%;
+  max-width: 350px;
+  text-align: left;
+}
+
+.password-rules li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.3s ease;
+}
+
+.password-rules i {
+  font-size: 13px;
+  color: #777;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.password-rules li.valid {
+  color: #00ff7f;
+}
+
+.password-rules li.valid i {
+  color: #00ff7f;
+  transform: scale(1.2);
+}
+
+/* ============================
+   Button
+============================ */
+.btn {
+  width: 100%;
+  max-width: 350px;
+  background: linear-gradient(90deg, #6b46ff, #4b9fff);
+  color: #fff;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.btn:hover {
+  background: linear-gradient(90deg, #4b9fff, #6b46ff);
+  transform: translateY(-2px);
+}
+
+/* ============================
+   Responsive Fix
+============================ */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px 20px;
+    gap: 10px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .form-container {
+    margin: 20px auto;
+    padding: 30px 10px;
+  }
+
+  form label,
+  form input,
+  .password-wrapper,
+  .password-rules,
+  .btn {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .password-rules {
+    grid-template-columns: 1fr;
+  }
+}

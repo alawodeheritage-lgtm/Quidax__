@@ -1,5 +1,5 @@
 body {
-  margin: 0px 20px;
+  margin: 0px 10px;
   padding-top: 90px;
   background-color: #FFFFFF;
 }
@@ -10,7 +10,7 @@ body {
   justify-content: space-between;
   align-items: center;
   text-align: left;
-  padding: 0px 40px;
+  padding: 0px 20px;
   position: fixed;
   right: 0;
   top: 0;
@@ -26,9 +26,8 @@ body {
 .quidax-header {
   color: #6100A5;
   font-weight: bold;
-  font-size: 40px;
+  font-size: 35px;
   text-align: left;
-  margin-left: 10px;
 }
 
 /* NAV LINKS */
@@ -37,17 +36,17 @@ body {
   align-items: center;
   gap: 24px;
   font-weight: 100;
-  margin-left: 80px;
+  margin-left: 150px;
   margin-right: 40px;
 }
 
 .nav-links ul {
   display: flex;
-  gap: 60px;
+  gap: 85px;
   list-style: none;
   margin: 0;
   padding: 0;
-  font-size: 16px;
+  font-size: 18px;
   color: #1a1a1a;
 }
 
@@ -57,8 +56,9 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: black;
-  font-weight: 500;
+  color: #1a1a1a;
+  font-weight: 400;
+  font-size: 18px;
   transition: 0.3s;
   position: relative;
 }
@@ -98,7 +98,8 @@ body {
   width: 100% !important;
   max-width: none !important;
   margin: 0 !important;
-  padding: 40px 100px !important;
+  margin-top: 80px;
+  padding: 60px 120px !important;
   box-sizing: border-box !important;
   background: #fff !important;
   z-index: 99999 !important;
@@ -151,6 +152,7 @@ body {
   font-weight: bold;
   display: none;
   color: #6100A5;
+  cursor: pointer;
 }
 
 /* DROPDOWN TEXT STYLES */
@@ -203,14 +205,17 @@ body {
 
 /* MENU ICON */
 .menu-icon {
-  width: 25px;
+  width: 26px;
   height: 18px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
 }
-
+.menu-icon span {
+  height: 9px;
+  border-radius: 20px;
+}
 .dropdown.show .dropdown-menu {
   visibility: visible;
   opacity: 1;
@@ -303,4 +308,8 @@ body {
   width: 170px;
   height: 90px;
 }
+}
+.mid-div {
+  margin-top: 10px;
+  display: grid;
 }

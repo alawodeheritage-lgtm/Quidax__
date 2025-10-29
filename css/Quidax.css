@@ -1,20 +1,29 @@
 /* Body */
+.text-section {
+  margin-top: 18px;
+}
 .buy-header {
-  font-size: 55px;
+  font-size: 56px;
   font-family: Arial;
-  font-weight: 700;
-  margin-top: 100px;
-  color: rgb(32,23,73);
+  font-weight: 600;
+  margin-top: 60px;
+  color: #201749;
   line-height: 65px;
+  margin-bottom: 15px;
 }
 .buy-header span {
   display: block;
   width: 100%;
   margin: 5px 0;
 }
-@media (min-width: 767px) {
+.buy-header.ease-word {
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+  }
+@media (min-width: 800px) {
   .buy-header {
-  text-align: left;
+    text-align: left;
   }
   .buy-header span {
     display: inline;
@@ -24,45 +33,56 @@
   }
   .buy-header.ease-word {
     text-align: center;
-    display: block;
     margin-top: 10px;
   }
 }
-.mid-div {
-  margin-top: 10px;
-  display: grid;
+@media(min-width:900px) {
+  .line1, 
+  .line2 {
+    display: block;
+  }
 }
 .quidax-p {
   font-family: UncutSans,sans-serif;
-  font-size: 13px;
-  font-weight: lighter;
-  line-height: 1.6;
+  font-size: 13.5px;
+  line-height: 1.2;
   color: #4C4A55;
   display: flex;
+  margin-top: 10px;
 }
 .input-mail {
   background-color: transparent;
   width: 100%;
-  font-size: 13.5px;
+  font-size: 12.5px;
   height: 45px;
+  font-weight: 550;
+  max-width: 767px;
   border-radius: 8px;
   margin-left: 0px;
   border:0.2px solid #ccc;
   border: lighter;
   color: rgb(76, 74, 85);
+  background-color: rgb(252, 248, 248);
   margin-top: 10px;
   padding-left: 16px;
 }
 .input-mail:focus {
-  border-color:  #6100A5;;
+  border-color: #6100A5;
   outline: none;
 }
+/* slant Y */
+.input-mail::first-letter {
+  transform: skewX(20deg);
+  display: inline-block;
+}
+/* Started Button */
 .started-button {
-  background-color:  #6100A5;;
+  background-color: #6100A5;
   color: white;
   border: none;
   height: 46px;
-  width: 435px;
+  width: 100%;
+  max-width: 767px;
   margin-top: 15px;
   border-radius: 10px;
   font-weight: bold;
@@ -71,6 +91,12 @@
 .started-button:hover {
   background-color: rgb(114, 233, 114);
   transition: 0.5s;
+}
+
+/* Default (mobile): stacked layout */
+.container-header {
+  display: flex;
+  flex-direction: column;
 }
 .main-div {
   display: flex;
@@ -103,27 +129,37 @@
 .sub-button2 span {
   font-size: 18px;
 }
-@media  (min-width:700px) {
-  .mid-div{
+.phone-img {
+  display: flex;
+  width: 400px;
+  height: 400px;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+/* Center forms on medium screens */
+@media (min-width:767px) {
+  .mid-div {
     place-items: center;
   }
-  .main-div{
+  .main-div {
     justify-content: center;
   }
 }
-@media  (min-width:700px) {
+
+/* Adjust input/button sizes */
+@media (max-width:767px) {
   .input-mail {
-    width: 300px;
-  }
-  .started-button {
-    width: 110px;
+    width: 100%;
   }
 }
+
 @media (max-width: 850px) {
   .input-search {
     display: none;
   }
 }
+
 .Quidax-info {
   color: #201749;
 }
@@ -148,7 +184,7 @@
   width: 500px;
   margin-left: 0px;
   width: auto;
-  background-color:  #6100A5;;
+  background-color: #6100A5;
 }
 .input-div {
   display: flex;
@@ -168,17 +204,17 @@
   border-color: whitesmoke;
 }
 .input-search:focus {
-  border-color:  #6100A5;;
+  border-color: #6100A5;
   outline: none;
 }
-@media (min-width:1000px) {
+@media (min-width: 1000px) {
   .input-search {
     margin-right: 0px;
   }
 }
 .tabs .active {
-  color:  #6100A5;;
-  border-bottom: 2px solid  #6100A5;;
+  color: #6100A5;
+  border-bottom: 2px solid #6100A5;
   padding-bottom: 4px;
 }
 
@@ -233,12 +269,13 @@
   margin-top: 15px;
   cursor: pointer;
 }
+
 .container-menu {
   display: flex;
   flex-direction: column;
 }
 .container-box {
-  background-color:  #6100A5;;
+  background-color: #6100A5;
   height: 840px;
   display: flex;
   flex-direction: column; 
@@ -261,43 +298,34 @@
   color: white;
   text-align: center;
 }
-.Quidax-p{
+.Quidax-p {
   color: white;
   font-size: 20px;
   font-weight: lighter;
-  padding-top: px;
 }
 
+/* ====== Move phone image to the right using media query ====== */
 @media (min-width: 900px) {
-  .container-menu {
-      flex-direction: row;
-   }
-   .Quidax-info {
-    order: 1;
-   }
-   .mid-header {
+  .container-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+  }
+  .phone-img {
+    flex: 1;
+    margin-left: auto;
+    height: auto;
     order: 2;
-   }
-   .texts {
-    order: 2;
-   }
-   .img-box {
-    order: 1;
-   }
-   .container-box {
-      flex-direction: row;
-   }
-   .Quidax-h3 {
-      order: 1;
-   }
-   .Quidax-p {
-      order: 1;
-   }
-   .text {
-      order: 1;
-   }
-   .img-capital {
-    order: 2;
-   }
+  }
+  .text-section {
+    flex: 1;
+    text-align: left;
+  }
 }
-
+@media(max-width: 770px) {
+  .phone-img {
+  display: none;
+  }
+}

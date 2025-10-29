@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account</title>
+  <link rel="stylesheet" href="css/Started.css">
+
+  <!-- Font Awesome for eye and check icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+</head>
+
+<body>
+  <header class="navbar">
+    <h1 class="logo">Quidax</h1>
+    <nav class="nav-links">
+      <a href="#">Log In</a>
+      <a href="#">Download</a>
+      <img src="pictures/download.png" alt="" class="image-bright">
+      <a href="#">English</a>
+    </nav>
+  </header>
+
+  <main class="form-container">
+    <p class="official">🔒 Official website:
+      <a href="https://quidax-website.vercel.app/" target="_blank">https://quidax-website.vercel.app/</a>
+    </p>
+
+    <h2 class="form-title">Create Account</h2>
+
+    <form id="signupForm">
+      <label>Email address</label>
+      <input type="email" placeholder="you@example.com" aria-label="email" required>
+
+      <label>Password</label>
+      <div class="password-wrapper">
+        <input type="password" id="password" placeholder="Password" required>
+        <i class="fa-solid fa-eye toggle-icon" id="togglePassword"></i>
+      </div>
+
+      <!-- Password rules in 2 columns -->
+      <ul class="password-rules" id="passwordRules">
+        <li id="rule1"><i class="fa-solid fa-check"></i> Minimum of 8 characters</li>
+        <li id="rule2"><i class="fa-solid fa-check"></i> Maximum of 64 characters</li>
+        <li id="rule3"><i class="fa-solid fa-check"></i> Upper case character</li>
+        <li id="rule4"><i class="fa-solid fa-check"></i> Lower case character</li>
+        <li id="rule5"><i class="fa-solid fa-check"></i> At least one number</li>
+        <li id="rule6"><i class="fa-solid fa-check"></i> At least one special character</li>
+      </ul>
+
+      <label>Confirm password</label>
+      <div class="password-wrapper">
+        <input type="password" id="confirmPassword" placeholder="Confirm password" required>
+        <i class="fa-solid fa-eye toggle-icon" id="toggleConfirmPassword"></i>
+      </div>
+
+      <label>Invitation code (optional)</label>
+      <input type="text" placeholder="Enter code">
+
+      <button type="submit" class="btn">Create Account</button>
+    </form>
+  </main>
+<script src="Started.js"></script>
+</body>
+</html>

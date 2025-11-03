@@ -1,14 +1,14 @@
 /* Body */
 .text-section {
-  margin-top: 18px;
+  margin-top: 5px;
 }
 .buy-header {
   font-size: 56px;
   font-family: Arial;
-  font-weight: 600;
-  margin-top: 60px;
+  font-weight: 700;
+  margin-top: 0px;
   color: #201749;
-  line-height: 65px;
+  line-height: 70px;
   margin-bottom: 15px;
 }
 .buy-header span {
@@ -21,20 +21,18 @@
     display: block;
     margin-top: 10px;
   }
-@media (min-width: 800px) {
+@media (min-width: 900px) {
   .buy-header {
-    text-align: left;
+    padding-top: 50px;
+    font-size: 63px;
+    padding-left: 8px;
   }
-  .buy-header span {
+  /*.buy-header span {
     display: inline;
     text-align: left;
     width: auto;
     margin: 0;
-  }
-  .buy-header.ease-word {
-    text-align: center;
-    margin-top: 10px;
-  }
+  }*/
 }
 @media(min-width:900px) {
   .line1, 
@@ -43,27 +41,43 @@
   }
 }
 .quidax-p {
-  font-family: UncutSans,sans-serif;
-  font-size: 13.5px;
-  line-height: 1.2;
+  font-family: UncutSans, sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
   color: #4C4A55;
-  display: flex;
-  margin-top: 10px;
+  margin-top: 2px;
 }
+
+/* At small screens: combine both sentences in one line */
+@media (max-width: 899px) {
+  .merge-paragraphs {
+    display: inline;
+  }
+}
+
+/* At 900px and above: break into two lines */
+@media (min-width: 900px) {
+  .merge-paragraphs {
+    display: block;
+  }
+  .quidax-p {
+    font-size: 15px;
+  }
+}
+
 .input-mail {
   background-color: transparent;
-  width: 100%;
-  font-size: 12.5px;
-  height: 45px;
-  font-weight: 550;
+  width: 90%;
+  font-size: 14px;
+  height: 50px;
+  font-weight: 500;
   max-width: 767px;
   border-radius: 8px;
   margin-left: 0px;
   border:0.2px solid #ccc;
-  border: lighter;
   color: rgb(76, 74, 85);
   background-color: rgb(252, 248, 248);
-  margin-top: 10px;
+  margin-top: 40px;
   padding-left: 16px;
 }
 .input-mail:focus {
@@ -75,11 +89,12 @@
   background-color: #6100A5;
   color: white;
   border: none;
-  height: 46px;
-  width: 100%;
+  height: 50px;
+  width: 95%;
   max-width: 767px;
+  font-size: 16px;
   margin-top: 15px;
-  border-radius: 10px;
+  border-radius: 13px;
   font-weight: bold;
   cursor: pointer;
 }
@@ -87,7 +102,17 @@
   background-color: rgb(114, 233, 114);
   transition: 0.5s;
 }
-
+/* Media Query For Mail input and button */
+@media (min-width: 767px) {
+  .input-mail {
+    width: 50%;
+  }
+  .started-button {
+    margin-left: 20px;
+    width: 28%;
+    height: 53px;
+  }
+}
 /* Default (mobile): stacked layout */
 .container-header {
   display: flex;
@@ -95,15 +120,17 @@
 }
 .main-div {
   display: flex;
-  margin-top: 30px;
+  margin-top: 60px;
+  padding-left: 20px;
+  margin-left: 15px;
 }
 .sub-button1 {
   background-color: black;
   color: white;
   border: none;
-  height: 45px;
+  width: 100%;
+  height: 50px;
   border-radius: 5px;
-  width: 155px;
   font-weight: lighter;
   font-size: 10.5px;
 }
@@ -114,22 +141,38 @@
   background-color: black;
   color: white;
   border: none;
-  height: 45px;
+  width: 100%;
+  height: 50px;
   border-radius: 5px;
-  width: 155px;
   font-weight: lighter;
   font-size: 10.5px;
-  margin-left: 18px;
+  margin-left: 20px;
 }
 .sub-button2 span {
   font-size: 18px;
 }
+/* Media Query For sub button*/
+@media (min-width: 900px) {
+  .main-div {
+    margin-left: 0;
+    align-items: start;
+    padding-left: 0px;
+  }
+  .sub-button1 {
+    width: 25%;
+  }
+  .sub-button2 {
+    width: 26%;
+    
+  }
+}
+
 .phone-img {
   display: flex;
-  width: 400px;
-  height: 400px;
+  width: auto;
+  height: 550px;
+  margin-top: 45px;
   flex-direction: column;
-  margin: 0 auto;
 }
 
 /* Center forms on medium screens */
@@ -137,18 +180,18 @@
   .mid-div {
     place-items: center;
   }
-  .main-div {
+  /*.main-div {
     justify-content: center;
-  }
+  }*/
 }
 
-/* Adjust input/button sizes */
+/* Adjust input/button sizes 
 @media (max-width:767px) {
   .input-mail {
     width: 100%;
   }
 }
-
+*/
 @media (max-width: 850px) {
   .input-search {
     display: none;
@@ -159,8 +202,9 @@
   color: #201749;
 }
 .mid-header {
+  font-family: UncutSans, sans-serif;
   font-weight: 30px;
-  font-size: 25px;
+  font-size: 32px;
   color: #201749;
 }
 .texts {
@@ -212,19 +256,29 @@
   border-bottom: 2px solid #6100A5;
   padding-bottom: 4px;
 }
+.market-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+}
 
 .market-table {
+  width: 90%;
   background: #fafafa;
-  border-radius: 12px;
-  padding: 15px;
+  border-radius: 20px;
+  padding: 30px;
   box-shadow: 0 0 5px rgba(0,0,0,0.05);
+  border-bottom: 1px solid #ddd;
 }
 
 .table-header,
 .coin-row {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 0;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 0.8fr;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
 }
 
 .table-header {
@@ -243,11 +297,12 @@
   width: 32px;
   height: 32px;
 }
-
-.coin-price {
-  text-align: right;
+.coin-price,
+.coin-pair,
+.coin-change {
+  text-align: center;
+  font-size: 14px;
 }
-
 .up {
   color: green;
   font-size: 14px;
@@ -257,7 +312,28 @@
   color: red;
   font-size: 14px;
 }
+@media (max-width: 900px) {
+  .buy-btn {
+    display: none;
+  }
+}
+.buy-btn {
+  background-color: #6100A5;
+  color: white;
+  border: none;
+  width: 55px;
+  padding: 6px 6px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.buy-btn:hover {
+  background-color: #4b0082;
+}
+
 .see-more {
+  font-size: 20.64px;
   text-align: center;
   color: #4b0082;
   font-weight: bold;
@@ -298,25 +374,33 @@
   font-size: 20px;
   font-weight: lighter;
 }
+.container-header {
+    margin-top: 70px;
+  }
 
 /* ====== Move phone image to the right using media query ====== */
 @media (min-width: 900px) {
   .container-header {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
-    padding: 0 50px;
+    padding: 0 25px;
+    margin-top: 90px;
   }
   .phone-img {
     flex: 1;
+    margin-top: 0;
     margin-left: auto;
-    height: auto;
     order: 2;
   }
   .text-section {
     flex: 1;
     text-align: left;
+    margin-top: 0;
+  }
+  .buy-header {
+    margin-top: 0;
   }
 }
 @media(max-width: 770px) {

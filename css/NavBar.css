@@ -1,8 +1,13 @@
 body {
-  margin: 0px 10px;
+  margin: 0px 15px;
   padding-top: 90px;
   background-color: #FFFFFF;
 }
+/*@media(min-width: 900px) {
+  body {
+    padding-top: 140px;
+  }
+}*/
 
 /* NAVBAR */
 .nav-bar {
@@ -98,10 +103,10 @@ body {
   width: 100% !important;
   max-width: none !important;
   margin: 0 !important;
-  margin-top: 80px;
-  padding: 60px 120px !important;
+  margin-top: 90px;
+  padding: 80px 120px !important;
   box-sizing: border-box !important;
-  background: #fff !important;
+  background: white !important;
   z-index: 99999 !important;
   visibility: hidden;
   opacity: 0;
@@ -109,6 +114,7 @@ body {
   transition: opacity .22s ease, transform .22s ease;
   pointer-events: none;
   overflow: hidden;
+  max-height: 320px;
 }
 
 .image-nav {
@@ -298,7 +304,7 @@ body {
 @media(min-width: 1022px) {
 .sign-li {
   padding-right: 30px;
-  font-size: 16px;
+  font-size: 19px;
   font-weight: bold;
   display: flex;
 }

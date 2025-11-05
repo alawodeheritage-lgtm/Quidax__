@@ -93,7 +93,9 @@ body {
 .dropdown {
   position: relative;
 }
-
+.arrow {
+  font-size: 13px;
+}
 .dropdown-menu {
   text-align: left;
   position: fixed !important;
@@ -118,6 +120,7 @@ body {
 }
 
 .image-nav {
+  max-width: 100%;
   width: 35px;
 }
 
@@ -188,6 +191,7 @@ body {
   background-color: #6100A5;
   color: white;
   border: none;
+  max-width: 100%;
   height: 45px;
   width: 140px;
   border-radius: 10px;
@@ -211,6 +215,7 @@ body {
 
 /* MENU ICON */
 .menu-icon {
+  max-width: 100%;
   width: 26px;
   height: 18px;
   display: flex;
@@ -260,12 +265,12 @@ body {
 
   .nav-links ul {
     flex-direction: column;
-    width: 100%;
+    max-width: 100%;
     padding-left: 20px;
   }
 
   .dropdown {
-    width: 100%;
+    max-width: 100%;
   }
 
   .dropdown-menu {
@@ -311,6 +316,7 @@ body {
 }
 @media(min-width: 1022px) and (max-width: 1050px) {
 .get-button {
+  max-width: 100%;
   width: 170px;
   height: 90px;
 }

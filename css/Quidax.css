@@ -121,8 +121,6 @@
 .main-div {
   display: flex;
   margin-top: 60px;
-  padding-left: 20px;
-  margin-left: 15px;
 }
 .sub-button1 {
   background-color: black;
@@ -169,8 +167,9 @@
 
 .phone-img {
   display: flex;
-  width: auto;
-  height: 550px;
+  max-width: 100%;
+  width: 200px;
+  height: auto;
   margin-top: 45px;
   flex-direction: column;
 }
@@ -260,15 +259,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 60px;
+  margin-top: 20px;
 }
 
 .market-table {
-  width: 90%;
+  width: 100%;
   background: #fafafa;
   border-radius: 20px;
   padding: 30px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
   border-bottom: 1px solid #ddd;
 }
 
@@ -294,7 +293,8 @@
 }
 
 .coin-info img {
-  width: 32px;
+  width: 100%;
+  max-width: 32px;
   height: 32px;
 }
 .coin-price,
@@ -344,39 +344,80 @@
 .container-menu {
   display: flex;
   flex-direction: column;
+  margin-top: 15px;
 }
+/* Default (mobile) — stack image then text */
+/* CONTAINER SECTION */
 .container-box {
-  background-color: #6100A5;
-  height: 840px;
   display: flex;
-  flex-direction: column; 
-}
-.img-box {
-  width: 400px;
-  height: 400px;
-  padding-left: 20px;
-  vertical-align: middle;
-}
-.img-capital {
-  width: 400px;
-  height: 400px;
-  padding-left: 20px;
-  vertical-align: middle;
-}
-.Quidax-h3 {
-  font-size: 45px;
-  font-weight: bolder;
-  color: white;
+  flex-direction: column; /* Stack on mobile */
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  background-color: #6100A5;
+  padding: 40px 20px;
+  gap: 30px;
 }
-.Quidax-p {
+
+/* IMAGE */
+.img-capital {
+  width: 70%;
+  max-width: 420px;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* TEXT SECTION */
+.text-div {
   color: white;
-  font-size: 20px;
-  font-weight: lighter;
+  max-width: 500px;
 }
-.container-header {
-    margin-top: 70px;
+
+.Quidax-h3 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.Quidax-p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* DESKTOP VIEW (≥900px): text left, image right */
+@media (min-w9idth: 900px) {
+  .container-box {
+    flex-direction: row; /* Put them side by side */
+    justify-content: space-between;
+    text-align: left;
+    padding: 60px 100px;
   }
+
+  /* Make text appear left even though it comes second in HTML */
+  .text-div {
+    order: 1;
+    flex: 1;
+    padding-right: 40px;
+  }
+
+  /* Make image appear on right */
+  .img-capital {
+    order: 2;
+    flex: 1;
+    max-width: 45%;
+  }
+
+  .Quidax-h3 {
+    font-size: 36px;
+  }
+
+  .Quidax-p {
+    font-size: 18px;
+  }
+  .text-section { order: 1; }
+  .img-capital { order: 2; }
+
+}
 
 /* ====== Move phone image to the right using media query ====== */
 @media (min-width: 900px) {

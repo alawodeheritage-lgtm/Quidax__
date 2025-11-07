@@ -3,12 +3,12 @@
   margin-top: 5px;
 }
 .buy-header {
-  font-size: 56px;
+  font-size: 60px;
   font-family: Arial;
   font-weight: 700;
-  margin-top: 0px;
+  margin-top: 70px;
   color: #201749;
-  line-height: 70px;
+  line-height: 75px;
   margin-bottom: 15px;
 }
 .buy-header span {
@@ -105,11 +105,11 @@
 /* Media Query For Mail input and button */
 @media (min-width: 767px) {
   .input-mail {
-    width: 50%;
+    width: 40%;
   }
   .started-button {
     margin-left: 20px;
-    width: 28%;
+    width: 23%;
     height: 53px;
   }
 }
@@ -117,6 +117,7 @@
 .container-header {
   display: flex;
   flex-direction: column;
+  margin-top: 90px;
 }
 .main-div {
   display: flex;
@@ -126,7 +127,7 @@
   background-color: black;
   color: white;
   border: none;
-  width: 100%;
+  width: 40%;
   height: 50px;
   border-radius: 5px;
   font-weight: lighter;
@@ -139,7 +140,7 @@
   background-color: black;
   color: white;
   border: none;
-  width: 100%;
+  width: 40%;
   height: 50px;
   border-radius: 5px;
   font-weight: lighter;
@@ -164,12 +165,30 @@
     
   }
 }
+@media(max-width: 500px) {
+  .coin-pair,
+  .coin-pair,
+  .change,
+  .trade {
+    display: none;
+  }
+  .coin-info {
+    display: flex;
+    padding-right: 200px;
+  }
+  .last-price {
+    display: flex;
+    padding-left: 230px;
+    vertical-align: middle;
+  }
+
+}
 
 .phone-img {
   display: flex;
-  max-width: 100%;
-  width: 200px;
-  height: auto;
+  max-width: 60%;
+  width: 150px;
+  height: 500px;
   margin-top: 45px;
   flex-direction: column;
 }
@@ -341,11 +360,6 @@
   cursor: pointer;
 }
 
-.container-menu {
-  display: flex;
-  flex-direction: column;
-  margin-top: 15px;
-}
 /* Default (mobile) — stack image then text */
 /* CONTAINER SECTION */
 .container-box {
@@ -359,10 +373,25 @@
   gap: 30px;
 }
 
+.container-menu {
+  display: flex;
+  flex-direction: column; /* Stack on mobile */
+  justify-content: center;
+  background-color: #eee5e5;
+  padding: 10px 10px;
+  gap: 30px;
+}
+
 /* IMAGE */
 .img-capital {
   width: 70%;
-  max-width: 420px;
+  max-width: 350px;
+  height: auto;
+  border-radius: 12px;
+}
+.img-box {
+  width: 80%;
+  max-width: 400px;
   height: auto;
   border-radius: 12px;
 }
@@ -372,32 +401,43 @@
   color: white;
   max-width: 500px;
 }
+.texts-div {
+  color: white;
+  max-width: 500px;
+}
 
-.Quidax-h3 {
-  font-size: 28px;
-  font-weight: 700;
+.Quidax-h3,
+.Quidax-info,
+.mid-header {
+  font-size: 20px;
+  font-weight: 600;
   margin-bottom: 10px;
 }
 
-.Quidax-p {
+.Quidax-p,
+.text {
   font-size: 16px;
   line-height: 1.5;
 }
 
 /* DESKTOP VIEW (≥900px): text left, image right */
-@media (min-w9idth: 900px) {
-  .container-box {
+@media (min-width: 900px) {
+  .container-box,
+  .container-menu {
     flex-direction: row; /* Put them side by side */
     justify-content: space-between;
     text-align: left;
-    padding: 60px 100px;
+    padding: 20px 10px;
   }
 
   /* Make text appear left even though it comes second in HTML */
   .text-div {
     order: 1;
     flex: 1;
-    padding-right: 40px;
+  }
+  .texts-div {
+    order: 2;
+    flex: 1;
   }
 
   /* Make image appear on right */
@@ -406,16 +446,33 @@
     flex: 1;
     max-width: 45%;
   }
-
-  .Quidax-h3 {
+  .img-box {
+    order: 1;
+    flex: 1;
+    max-width: 70%;
+  }
+  .grid-templates {
+    display: grid;
+  }
+  .Quidax-info {
+    margin-bottom: 25px;
     font-size: 36px;
   }
+  .Quidax-h3{
+    margin-bottom: 25px;
+    font-size: 28px;
+  }
+  .mid-header {
+    margin-bottom: 25px;
+    font-size: 24px;
+  }
 
-  .Quidax-p {
+  .Quidax-p,
+  .texts {
     font-size: 18px;
   }
   .text-section { order: 1; }
-  .img-capital { order: 2; }
+  .img-capital{ order: 2; }
 
 }
 
@@ -432,6 +489,8 @@
   .phone-img {
     flex: 1;
     margin-top: 0;
+    max-width: 100%;
+    width: 150px;
     margin-left: auto;
     order: 2;
   }

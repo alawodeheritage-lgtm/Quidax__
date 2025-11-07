@@ -1,0 +1,58 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.scroll-section {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  background-color: #fff;
+  padding: 70px 0;
+}
+
+.scroll-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.scroll-content {
+  display: flex;
+  animation: scrollLeft 25s linear infinite;
+}
+
+/* Pause animation when hovered */
+.scroll-section:hover .scroll-content {
+  animation-play-state: paused;
+}
+
+.box {
+  flex: 0 0 auto;
+  width: 320px;
+  height: 130px;
+  border-radius: 10px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for individual cards */
+.box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Keyframes for smooth, continuous left scroll */
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

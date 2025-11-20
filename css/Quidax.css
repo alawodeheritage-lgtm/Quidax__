@@ -1,20 +1,35 @@
+/* Global page spacing */
+.container {
+max-width: 1400px;
+margin: 0 25px;
+padding-left: 15px;
+padding-right: 15px;
+}
+/* {
+  box-sizing: border-box;
+}
+  body {
+    margin: 0;
+    padding: 0 20px;
+    padding-right: 20px;
+  }*/
+
 /* Body */
 .text-section {
   margin-top: 5px;
 }
 .buy-header {
-  font-size: 60px;
+  font-size: 54px;
   font-family: Arial;
   font-weight: 700;
   margin-top: 70px;
   color: #201749;
-  line-height: 75px;
+  line-height: 70px;
   margin-bottom: 15px;
 }
 .buy-header span {
   display: block;
   width: 100%;
-  margin: 5px 0;
 }
 .buy-header.ease-word {
     text-align: center;
@@ -25,7 +40,6 @@
   .buy-header {
     padding-top: 50px;
     font-size: 63px;
-    padding-left: 8px;
   }
   /*.buy-header span {
     display: inline;
@@ -78,7 +92,7 @@
   color: rgb(76, 74, 85);
   background-color: rgb(252, 248, 248);
   margin-top: 40px;
-  padding-left: 16px;
+  padding-left: 20px;
 }
 .input-mail:focus {
   border-color: #6100A5;
@@ -108,7 +122,6 @@
     width: 40%;
   }
   .started-button {
-    margin-left: 20px;
     width: 23%;
     height: 53px;
   }
@@ -279,13 +292,15 @@
   justify-content: center;
   align-items: center;
   margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 0 10px;
 }
 
 .market-table {
   width: 100%;
   background: #fafafa;
   border-radius: 20px;
-  padding: 30px;
+  padding: 10px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
   border-bottom: 1px solid #ddd;
 }
@@ -369,8 +384,8 @@
   justify-content: center;
   text-align: center;
   background-color: #6100A5;
-  padding: 40px 20px;
-  gap: 30px;
+  padding: 40px 0;
+  gap: 20px;
 }
 
 .container-menu {
@@ -378,8 +393,8 @@
   flex-direction: column; /* Stack on mobile */
   justify-content: center;
   background-color: #eee5e5;
-  padding: 10px 10px;
-  gap: 30px;
+  padding: 0;
+  gap: 20px;
 }
 
 /* IMAGE */
@@ -427,7 +442,7 @@
     flex-direction: row; /* Put them side by side */
     justify-content: space-between;
     text-align: left;
-    padding: 20px 10px;
+    padding: 20px;
   }
 
   /* Make text appear left even though it comes second in HTML */
@@ -483,8 +498,7 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 0 25px;
-    margin-top: 90px;
+    margin-top: 180px;
   }
   .phone-img {
     flex: 1;

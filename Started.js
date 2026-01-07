@@ -1,3 +1,9 @@
+// Get saved email
+    const savedEmail = localStorage.getItem("userEmail");
+
+    if (savedEmail) {
+      document.getElementById("createEmail").value = savedEmail;
+    }
 document.addEventListener("DOMContentLoaded", function () {
       const password = document.getElementById('password');
       const confirmPassword = document.getElementById('confirmPassword');
